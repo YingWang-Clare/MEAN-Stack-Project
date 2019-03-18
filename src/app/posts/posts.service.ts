@@ -12,6 +12,10 @@ export class PostsService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
+  getPostUpdatedListener() {
+    return this.postsUpdated.asObservable();
+  }
+
   getPosts() {
     this.http.get<{message: string, posts: any}>('http://localhost:3000/api/posts')
     .pipe(map((postData) => {
@@ -27,10 +31,6 @@ export class PostsService {
       this.posts = transformedPosts;
       this.postsUpdated.next([...this.posts]);
     });
-  }
-
-  getPostUpdatedListener() {
-    return this.postsUpdated.asObservable();
   }
 
   getPost(id: string) {
