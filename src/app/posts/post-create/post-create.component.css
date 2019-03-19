@@ -1,24 +1,10 @@
-mat-card {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 1rem;
-}
-
 mat-form-field,
 textarea {
   width: 100%;
 }
 
-button[type='button'] {
-  margin-bottom: 1rem;
-}
-
-button[type='submit'] {
-  margin-top: 0.5rem;
-}
-
 mat-spinner {
- margin: auto;
+  margin: auto;
 }
 
 input[type="file"] {
