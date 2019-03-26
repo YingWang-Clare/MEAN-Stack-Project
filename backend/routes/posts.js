@@ -17,4 +17,5 @@ router.get("/:id", PostController.getOnePost);
 
 router.delete("/:id", checkAuth, PostController.deletePost);
 
+
 module.exports = router;
